@@ -1,0 +1,14 @@
+<div class= "container">
+  <h1 style="text-align:center">The List of All Restaurants</h1>
+    <p style="text-align:center">
+      <%= link_to'Create', new_restaurant_path %>
+      <%# <%= link_to 'Update', restaurant_path(restaurant) %>
+      <%# <%= link_to 'Edit', edit_restaurant_path(@restaurant)%>
+      <%# <%= link_to 'Delete', restaurant %>
+    </p>
+<hr>
+  <% @restaurants.each do |restaurant| %>
+  <h5> 🍽 <%= link_to restaurant.name, restaurant_path(restaurant) %> | <%= restaurant.category %></h5>
+    <p> ☎️ Contact Info:  <%= restaurant.address %>, <%=restaurant.phone_number %> </p>
+  <% end %>
+</div>
